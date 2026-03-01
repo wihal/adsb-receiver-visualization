@@ -1,35 +1,34 @@
+# ADS-B Receiver Visualization
 
+This project enables the **analysis and visualization of ADS-B flight data** received by a local ADS-B receiver (e.g., Dump1090 on a Raspberry Pi). The goal is to clearly display **flight movements, range, and flight altitudes** on maps.
 
-# ADS-B Receiver Visualisierung
+## Project Overview
 
-Dieses Projekt ermöglicht die **Analyse und Visualisierung von ADS-B-Flugdaten**, die von einem lokalen ADS-B-Receiver (z. B. Dump1090 auf einem Raspberry Pi) empfangen werden. Ziel ist es, **Flugbewegungen, Reichweite und Flughöhen** anschaulich auf Karten darzustellen.
+1. **Data Recording**
 
-## Projektübersicht
-
-1. **Datenaufzeichnung**
-
-    * Live-Daten von Dump1090 werden über TCP (`raspberrypi.local:30003`) erfasst.
-    * Gespeichert werden `icao`, `callsign`, `lat`, `lon`, `altitude_ft`, `distance_km`, `timestamp`.
+* Live data from Dump1090 is captured via TCP (`raspberrypi.local:30003`).
+* The following data is stored: `icao`, `callsign`, `lat`, `lon`, `altitude_ft`, `distance_km`, `timestamp`.
     * Output: **`adsb_live_log.csv`**
 
-2. **Erste und letzte Position pro Flugzeug**
+2. **First and last position per aircraft**
 
-    * Aus der Live-Log-Datei wird für jedes Flugzeug der **erste und letzte empfangene Punkt** extrahiert.
-    * Output: **`adsb_first_last.csv`**
+* The **first and last received point** for each aircraft is extracted from the live log file.
+* Output: **`adsb_first_last.csv`**
 
-3. **Visualisierung**
+3. **Visualization**
 
-    * **Erste und letzte Punkte** als kleine Marker auf der Karte
+    * **First and last points** as small markers on the map
 
-      * Grün = erster Punkt
-      * Rot = letzter Punkt
-    * **Linien zwischen erster und letzter Position**
+      * Green = first point
+      * Red = last point
+* **Lines between first and last position**
 
-      * Linienfarbe zeigt Flughöhe (Rot = niedrig, Lila = hoch)
-    * Kartenoutput:
+      * Line color indicates flight altitude (red = low, purple = high)
+* Map output:
 
-      * **`adsb_first_last_lines.html`** → einfache Linienkarte
-      * **`adsb_first_last_lines_colored.html`** → Linien farbcodiert nach Höhe
-      * **`adsb_live_points.html`** → alle empfangenen Punkte als Marker
+      * **`adsb_first_last_lines.html`** → simple line map
+      * **`adsb_first_last_lines_colored.html`** → lines color-coded by altitude
+      * **`adsb_live_points.html`** → all received points as markers
 
-Hinweis: Dieses Projekt sowie die Anleitung wurden mit Unterstützung von KI erstellt und verbessert.
+
+Note: This project and the instructions were created and improved with the support of AI.
