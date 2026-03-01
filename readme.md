@@ -16,19 +16,15 @@ This project enables the **analysis and visualization of ADS-B flight data** rec
 * Output: **`adsb_first_last.csv`**
 
 3. **Visualization**
-
     * **First and last points** as small markers on the map
-
       * Green = first point
       * Red = last point
 * **Lines between first and last position**
-
       * Line color indicates flight altitude (red = low, purple = high)
 * Map output:
-
-      * **`adsb_first_last_lines.html`** → simple line map
-      * **`adsb_first_last_lines_colored.html`** → lines color-coded by altitude
-      * **`adsb_live_points.html`** → all received points as markers
+  * **`adsb_first_last_lines.html`** → simple line map
+  * **`adsb_first_last_lines_colored.html`** → lines color-coded by altitude
+  * **`adsb_live_points.html`** → all received points as markers
 
 
 Note: This project and the instructions were created and improved with the support of AI.
